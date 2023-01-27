@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@600;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  background-image: url("bg2.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  /* font-family: 'Lobster', cursive; */
+}
+
+.content {
+  padding: 20px;
+}
+.box {
+  margin: 0 auto;
+  background-image: url("amel.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 30px;
+  width: 300px;
+  height: 450px;
+  -webkit-animation-name: animasi;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-timing-function: ease;
+}
+@keyframes animasi {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.content h3 {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  margin-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 8px #000;
+}
+.content h3 span {
+  color: rgb(19, 14, 14);
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  text-shadow: none;
+}
+.button {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  background-color: bisque;
+  padding: 20px 15px;
+  float: left;
+  margin: 10px;
+}
+#popOne,
+#popTwo,
+#popThree {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  width: 500px;
+  height: 190px;
+  border-radius: 5px;
+  box-shadow: darkslategray;
+  display: none;
+  padding: 20px 20px 20px 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#popTwo img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  margin-bottom: 10px;
+}
+.tombol-terimakasih {
+  background-color: red;
+  color: #fff;
+  width: 100px;
+  height: 20px;
+  padding: 10px 10px 10px 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.player {
+  position: relative;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  width: 350px;
+  /* background: #ffffff; */
+}
+.player .imgBx {
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+.player .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.player audio {
+  width: 100%;
+  outline: none;
+}
+footer {
+  background: seashell;
+  color: #000;
+  text-align: center;
+  height: 120px;
+  padding: 20px;
+}
+@media (max-width: 480px) {
+  #popOne,
+  #popTwo,
+  #popThree {
+    width: 300px;
+  }
+}
+
+i.fa-music {
+  /* position: fixed; */
+  /* right: 0px;
+  bottom: 15px; */
+  width: 50px;
+  height: 50px;
+  border: 1px solid red;
+  color: red;
+  z-index: 1;
+  cursor: pointer;
+  line-height: 49px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 2px #444444;
+  text-shadow: 0 0 1px #444444;
+}
+
+i.fa-music.pause:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: red;
+  transform: rotate(-36deg);
+}
+
+.container {
+  /* width: 100%; */
+  max-width: 900px;
+  padding: 15px;
+  /* background-color: #fff; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.slider .slick-slide {
+  border: solid 1px #000;
+}
+.slider .slick-slide img {
+  width: 100%;
+}
+
+.slick-prev, .slick-next {
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 5px;
+}
+.slick-next {
+  right: 5px;
+}
+.slick-prev:before, 
+.slick-next:before {
+    font-size: 40px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.slick-dots {
+  bottom: 15px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  opacity: 1;
+}
+.slick-dots li.slick-active button:before {
+  color: #dedede;
+}
+
+.slider:not(:hover) .slick-arrow,
+.slider:not(:hover) .slick-dots {
+    opacity: 0;
+}
+
+.slick-arrow,
+.slick-dots {
+    transition: opacity 0.5s ease-out;
+}
